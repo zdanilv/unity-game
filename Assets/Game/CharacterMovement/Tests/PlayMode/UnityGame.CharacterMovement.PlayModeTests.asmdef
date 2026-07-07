@@ -1,0 +1,20 @@
+{
+  "name": "UnityGame.CharacterMovement.PlayModeTests",
+  "rootNamespace": "UnityGame.CharacterMovement.Tests",
+  "references": [
+    "UnityGame.CharacterMovement",
+    "nunit.framework"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

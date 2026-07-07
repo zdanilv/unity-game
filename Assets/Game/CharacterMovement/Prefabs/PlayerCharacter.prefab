@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6162478594256112204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661820756269435141}
+  - component: {fileID: 5997309694652948133}
+  - component: {fileID: 1586442336719715458}
+  - component: {fileID: 7396837370057804962}
+  - component: {fileID: 7526967073661893772}
+  - component: {fileID: 6131714305710205937}
+  m_Layer: 0
+  m_Name: PlayerCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &661820756269435141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162478594256112204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6168088869201160550}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &5997309694652948133
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162478594256112204}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1.8
+  m_Radius: 0.4
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.95, z: 0}
+--- !u!114 &1586442336719715458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162478594256112204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1016de6360d38418964869d54bf053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityGame.CharacterMovement::UnityGame.CharacterMovement.PlayerMovementInput
+  mouseLookScale: 0.02
+  mouseZoomScale: 0.01
+  gamepadLookScale: 2.2
+  gamepadZoomScale: 1
+--- !u!114 &7396837370057804962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162478594256112204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac0c2116a50ead40b34fe600f810c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityGame.CharacterMovement::UnityGame.CharacterMovement.PlayerCharacterMotor
+  settings: {fileID: 11400000, guid: b3f72df76bb849d409d39beecbfcb09a, type: 2}
+  inputSourceBehaviour: {fileID: 1586442336719715458}
+  orientation: {fileID: 0}
+  drawDebugGizmos: 1
+--- !u!114 &7526967073661893772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162478594256112204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fa3fb4fd352e1448f0abb55e955fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityGame.CharacterMovement::UnityGame.CharacterMovement.PlayerLocomotionAnimator
+  motor: {fileID: 7396837370057804962}
+  animator: {fileID: 8719266480224604347}
+  horizontalParameter: Hor
+  verticalParameter: Vert
+  stateParameter: State
+  jumpParameter: IsJump
+  damping: 0.12
+--- !u!114 &6131714305710205937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162478594256112204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385cfae6551224c46aabb24facc15489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityGame.CharacterMovement.Ithappy::UnityGame.CharacterMovement.Ithappy.IthappyCameraInputAdapter
+  inputSourceBehaviour: {fileID: 1586442336719715458}
+  cameraTarget: {fileID: 0}
+  player: {fileID: 661820756269435141}
+--- !u!1001 &2087390853888589997
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 661820756269435141}
+    m_Modifications:
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558671957634276912, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+      propertyPath: m_Name
+      value: CharacterVisual
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 141491402316368243, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+    - {fileID: 6931980801635261079, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+    - {fileID: 8368894346478688483, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+--- !u!4 &6168088869201160550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5291328006720809419, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+  m_PrefabInstance: {fileID: 2087390853888589997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8719266480224604347 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7347315233048743958, guid: 3e94278a62d12944b933e4354c64e287, type: 3}
+  m_PrefabInstance: {fileID: 2087390853888589997}
+  m_PrefabAsset: {fileID: 0}

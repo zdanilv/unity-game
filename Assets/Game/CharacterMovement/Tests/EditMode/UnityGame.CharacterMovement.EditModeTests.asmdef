@@ -1,0 +1,22 @@
+{
+  "name": "UnityGame.CharacterMovement.EditModeTests",
+  "rootNamespace": "UnityGame.CharacterMovement.Tests",
+  "references": [
+    "UnityGame.CharacterMovement",
+    "nunit.framework"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "UnityGame.CharacterMovement.Ithappy",
+  "rootNamespace": "UnityGame.CharacterMovement.Ithappy",
+  "references": [
+    "UnityGame.CharacterMovement",
+    "ithappy.Creative_Characters_FREE"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
